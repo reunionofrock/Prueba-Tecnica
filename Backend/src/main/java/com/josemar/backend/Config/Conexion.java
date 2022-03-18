@@ -7,7 +7,7 @@ import java.sql.*;
 public class Conexion {
     private Connection conn = null;
 
-    String host = "LOCALHOST\\DEVELOPMENT:1433;";
+    String host = "LAPTOP-1M28B4K2\\SQLEXPRESS:1433;";
     String db = "database=PRUEBA_VACUNAS;";
     String user = "sa";
     String passwd = "1234";
