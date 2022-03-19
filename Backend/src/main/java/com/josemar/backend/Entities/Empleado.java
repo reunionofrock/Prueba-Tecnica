@@ -1,5 +1,7 @@
 package com.josemar.backend.Entities;
 
+import java.util.Date;
+
 public class Empleado {
     private int idEmpleado;
     private String nombreEmpleado;
@@ -7,10 +9,11 @@ public class Empleado {
     private String nombrePuesto;
     private int idVacuna;
     private String nombreVacuna;
-    private String fechaPrimerDosis;
-    private String fechaSegundaDosis;
+    private Date fechaPrimerDosis;
+    private Date fechaSegundaDosis;
     private int dosisUnica;
     private int estadoVacuna;
+
 
     public int getIdEmpleado() {
         return idEmpleado;
@@ -60,19 +63,19 @@ public class Empleado {
         this.nombreVacuna = nombreVacuna;
     }
 
-    public String getFechaPrimerDosis() {
+    public Date getFechaPrimerDosis() {
         return fechaPrimerDosis;
     }
 
-    public void setFechaPrimerDosis(String fechaPrimerDosis) {
+    public void setFechaPrimerDosis(Date fechaPrimerDosis) {
         this.fechaPrimerDosis = fechaPrimerDosis;
     }
 
-    public String getFechaSegundaDosis() {
+    public Date getFechaSegundaDosis() {
         return fechaSegundaDosis;
     }
 
-    public void setFechaSegundaDosis(String fechaSegundaDosis) {
+    public void setFechaSegundaDosis(Date fechaSegundaDosis) {
         this.fechaSegundaDosis = fechaSegundaDosis;
     }
 

@@ -29,8 +29,13 @@ public class EmpleadoDao implements EmpleadoInterface {
             String sql = "SELECT TOP 1 id_empleado FROM empleado order by 1 desc";
             PreparedStatement ps = cn.prepareStatement(sql);
             rs = ps.executeQuery();
-            rs.next();
-            empleado.setIdEmpleado(rs.getInt("id_empleado") + 1);
+            if(rs.next()){
+                empleado.setIdEmpleado(rs.getInt("id_empleado"));
+            }
+            else{
+                empleado.setIdEmpleado(1);
+            }
+
 
             String sql2 = "INSERT INTO REPORTE_VACUNAS(" +
                     "ID_EMPLEADO," +
