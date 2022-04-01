@@ -8,7 +8,7 @@ public class Conexion {
     private Connection conn = null;
 
     String host = "LAPTOP-1M28B4K2\\SQLEXPRESS:1433;";
-    String db = "database=PRUEBA_VACUNAS;";
+    String db = "database=PRUEBA_TECNICA_CLARO;";
     String user = "sa";
     String passwd = "1234";
 
@@ -32,7 +32,7 @@ public class Conexion {
     }
 
     public String stringConnectionUrl() {
-        return "jdbc:sqlserver://localhost\\DEVELOPMENT:1433; databaseName=PRUEBA_VACUNAS;";
+        return "jdbc:sqlserver://localhost\\DEVELOPMENT:1433; databaseName=PRUEBA_TECNICA_CLARO;";
     }
     public String getUser(){
         return user;

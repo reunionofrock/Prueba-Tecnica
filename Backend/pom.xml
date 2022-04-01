@@ -12,7 +12,7 @@
 	<artifactId>backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>backend</name>
-	<description>Backend vacunas</description>
+	<description>Backend</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
