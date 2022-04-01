@@ -12,22 +12,20 @@ public class NumeroGregorianoDao {
 
 
 
-    public String calculateRomanNumber(String num){
-        String numero = num;
-        int position;
-        String romanNumberFinded = "";
-        Integer[] numerosGregorianos = {1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000};
-        String[] numerosRomanos = {"I", "IV", "V", "IX", "X", "XL", "L", "XC", "C", "CD", "D", "CM", "M"};
-        Boolean data = Arrays.asList(numerosGregorianos).contains(Integer.parseInt(numero));
-        if(data){
-            position = Arrays.asList(numerosGregorianos).indexOf(Integer.parseInt(numero));
-            if(position > -1){
-                romanNumberFinded = numerosRomanos[position];
+    public String calculateRomanNumber(int num){
+
+        String romanNumbers[] = {"M", "CMXC", "CM", "D", "CDXC", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
+        int arab[] = {1000, 990, 900, 500, 490, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+        StringBuilder result = new StringBuilder();
+        int i = 0;
+        while (num > 0 || arab.length == (i - 1)) {
+            while ((num - arab[i]) >= 0) {
+                num -= arab[i];
+                result.append(romanNumbers[i]);
             }
-        }else{
-            romanNumberFinded = "";
+            i++;
         }
-        return romanNumberFinded;
+        return result.toString();
     }
 
 

@@ -16,7 +16,7 @@ public class OperationsController {
     @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/calculateRomanNumber/{numero}")
     public String calculateRomanNumber(
-            @PathVariable ("numero") String numero) throws SQLException {
+            @PathVariable ("numero") int numero) throws SQLException {
         NumeroGregorianoDao numeroDao = new NumeroGregorianoDao();
         return numeroDao.calculateRomanNumber(numero);
     }
